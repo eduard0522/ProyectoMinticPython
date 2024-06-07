@@ -1,0 +1,395 @@
+
+
+header{
+  background-image: url('../img/OceataMobil.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+header h1{
+  margin-top:2rem;
+  color: var(--second-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  z-index: 9;
+}
+
+.container-img-zamuro{
+  position: absolute;
+  bottom: 70px;
+  right: 3%;
+}
+.img-zamuro{
+  width: 70px;
+  z-index: 10;
+}
+.container-img-zamuro .info-zamuro{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 60%;
+  right: 80%;
+  display: none;
+}
+.container-img-zamuro p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  top: 30%;
+  left: -120%;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  transition: all 1s forwards;
+  display: none;
+}
+.container-img-zamuro .lineaRecta{
+  position: absolute;
+  transform: rotate(90deg);
+  top: 35%;
+  left:-30%;
+  transition: all 1s forwards;
+  display: none;
+}
+.container-img-venado{
+  position: absolute;
+  left: 1rem;
+  bottom: -30px;
+}
+.img-venado{
+  width: 200px;
+  transform: rotateX(-20deg);
+}
+
+.container-img-venado .info-venado{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  display: none;
+}
+
+
+.container-img-venado .lineaRecta{
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: rotate(90deg);
+  right: 25%;
+  transition: all 1s forwards;
+}
+.container-img-venado p{
+  display: none;
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  top: 60%;
+  right: 0;
+  font-size: 14px;
+}
+main{
+  padding: 1rem;
+}
+.cundinamarca h2 span{
+  color: var(--primary-dark);
+  font-size: 1.7rem;
+}
+.cundinamarca p{
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  font-weight: var(--font-semibold);
+}
+.cundinamarca p span{
+  color: var(--primary-color);
+}
+.grid-container{
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 'parrafo' 'imgs' ;
+}
+.cundinamarca-description{
+  width: 100%;
+  grid-area: parrafo;
+}
+.imgs-container-top{
+  grid-area: imgs;
+  display: flex;
+  flex-direction: column;
+}
+.imgs-container-top .img-container{
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+.imgs-container-top .img-container:nth-child(2),
+.imgs-container-top .img-container:nth-child(3){
+  display: none;
+}
+
+.imgs-container-top .img-container i{
+  position: absolute;
+  bottom: 75%;
+  left: .2rem;
+}
+.imgs-container-top .img-container img{
+  width: 100%;
+  height: 300px;
+  border-radius: .5rem;
+}
+
+.icon-flora{
+  width: 40px;
+  margin-left: .5rem;
+  transform: translateY(12px);
+}
+
+@media(width > 359px) and (width < 620px){
+  .container-img-danta{
+    right: 6%;
+  } 
+  .img-danta{
+    width: 70px;
+  }
+  .container-img-gentina{
+    right: 15%;
+  } 
+  .img-gentina{
+    width: 50px;
+  }
+}
+@media  (width >= 620px) and (width < 1024px) {
+  body{
+    margin: 0 auto;
+  }
+  header{
+    background-image: url('../img/boyacaHeader.jpg');
+    height: 50vh;
+    overflow: hidden;
+  } 
+  .container-img-zamuro{
+    bottom: 160px;
+    right: 7%;
+  }
+ .img-zamuro{
+    width: 140px;
+  }
+  .container-img-zamuro .info-zamuro{
+    display: block
+  }
+  .container-img-zamuro p{
+    display: block;
+  }
+  .container-img-zamuro .lineaRecta{
+    display: block;
+    width: 60px;
+  }
+  .container-img-venado{
+    bottom: -50px;
+    left: 5%;
+  }
+ .img-venado{
+    width: 400px;
+  }
+
+  .container-img-venado .info-venado{
+    display: block
+  }
+  .container-img-venado p{
+    display: block;
+  }
+  .container-img-venado .lineaRecta{
+    display: block;
+    width: 60px;
+  }
+
+  header h1{
+    position: absolute;
+    width: 100%;
+    top: 6rem;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  main{
+    padding: 2rem;
+  }
+ 
+  .grid-container{
+    gap: 1rem;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 'parrafo imgs';
+
+  }
+  .grid-container .img-container {
+   height: 250px;
+  }
+  .grid-container .img-container img{
+    height: 250px;
+   }
+   .grid-container .img-container i{
+    color: #fff;
+    top: 2rem;
+   }
+  
+  .cundinamarca-description{
+    width: 100%;
+    grid-area: parrafo;
+  }
+
+}
+
+@media (width > 770px) and (width < 1024px ) {
+
+  header h1{
+    top: 8rem;
+    font-size: 36px;
+  }
+  .container-img-zamuro{
+    bottom: 180px;
+    right: 7%;
+  }
+ .img-zamuro{
+    width: 160px;
+  }
+  .container-img-venado{
+    bottom: -100px;
+    left: 3%;
+  }
+ .img-venado{
+    width: 500px;
+  }
+}
+
+@media  (width >= 1024px){
+    body{
+      margin:0 auto;
+    }
+    header{
+      background-image: url('../img/boyacaHeader.jpg');
+      height: 100vh;
+      overflow: hidden;
+    } 
+    header h1{
+    width: 100%;
+    color: var(--second-color);
+    top: 6rem;
+    position: absolute;
+    z-index: 10;
+    display: block;
+    visibility: visible;
+    font-size: 2.8rem;
+    }
+
+    .container-img-zamuro{
+      bottom: 200px;
+      right: 8%;
+    }
+    .img-zamuro{
+        width: 200px;
+     }
+     .container-img-zamuro .info-zamuro{
+      display: block
+    }
+    .container-img-zamuro p{
+      display: block;
+    }
+    .container-img-zamuro .lineaRecta{
+      display: block;
+    }
+    .container-img-venado{
+      bottom: -100px;
+      left: 3%;
+    }
+    .img-venado{
+      width: 700px;
+     
+    }.container-img-venado .info-venado{
+      display: block
+    }
+    .container-img-venado p{
+      display: block;
+    }
+    .container-img-venado .lineaRecta{
+      display: block;
+    }
+   
+    
+    main{
+      padding: 2rem;
+    }
+    .subtitle{
+      font-size: 2rem;
+    }
+
+    .imgs-container-top{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .imgs-container-top .img-container{
+        width: 350px;
+    }
+
+    .imgs-container-top .img-container i{
+     top: 2.5rem;
+     color: #fff;
+    }
+
+  .imgs-container-top .img-container:nth-child(2),
+  .imgs-container-top .img-container:nth-child(3){
+    display: block;
+  }
+  .especies-cundinamarca{
+    margin-top: 2rem;
+  }
+
+  }
+  
+  @media  (width > 1024px) and (width < 1239px){
+    main{
+      padding: 1rem;
+    }
+  }
+
+  @media  (width > 1440px){
+    header h1{
+      position: absolute;
+      width: 100%;
+      top: 10rem;
+      text-align: center;
+      font-size: 48px;
+      z-index: 8;
+    }
+
+    .img-zamuro{
+        width: 220px;
+     }
+    .img-venado{
+        width: 750px;
+    }
+
+    main{
+      margin: auto;
+    }
+}
+@media  (width > 1600px){
+  header h1{
+    width: 100%;
+    top: 10rem;
+    text-align: center;
+    font-size: 56px;
+  }
+}

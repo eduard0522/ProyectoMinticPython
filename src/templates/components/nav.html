@@ -1,0 +1,16 @@
+<!-- Menu  -->
+<nav class="nav-menu">
+  <img src="{{ url_for('static' , filename='./assets/img/logo.png')}}" alt="">
+  <ul class="menu-list">
+    <li><a href="{{url_for('index')}}">Inicio</a></li>
+    <li class="list-regions"><a href="#">Regiones</a>
+      <ul>
+        <li><a href="{{url_for('cundinamarca')}}">Cundinamarca</a></li>
+        <li><a href="{{url_for('boyaca')}}">Boyacá</a></li>
+      </ul>
+    </li>
+    <li><a href="#" class="animales">Fauna</a></li>
+    <li><a href="#" class="plantas">Flora</a></li>
+  </ul>
+    <i class="bi bi-x-circle-fill closeMenu"></i> 
+</nav>

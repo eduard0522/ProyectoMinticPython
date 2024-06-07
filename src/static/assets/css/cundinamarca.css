@@ -1,0 +1,448 @@
+
+header{
+  background-image: url('../img/sumapazMobil.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+header h1{
+  color: var(--second-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  z-index: 9;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.container-img-danta{
+  position: absolute;
+  bottom: 100px;
+  right: 3%;
+}
+.img-danta{
+  width: 70px;
+}
+.container-img-danta p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  display: none;
+  opacity: 0;
+  top: 80%;
+  left: -120%;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  transition: all 1s forwards;
+}
+.container-img-danta .info-danta{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 40%;
+  right: 40%;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+
+}
+.container-img-danta .lineaRecta{
+  position: absolute;
+  top: 60%;
+  left: -30%;
+  display: none;
+  opacity:0;
+  transition: all 1s forwards;
+}
+.container-img-gentina{
+  position: absolute;
+  bottom: 0px;
+  right: 10%;
+}
+
+.img-gentina{
+  width: 40px;
+}
+.container-img-gentina .info-gentina{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  display: none;
+}
+
+.container-img-gentina p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  top: 30%;
+  left: -160%;
+  font-size: 14px;
+  display: none;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  transition: all 1s forwards;
+}
+
+.container-img-gentina .lineaRecta{
+  position: absolute;
+  top:30%;
+  left:-35%;
+  display: none;
+  opacity:0;
+  transition: all 1s forwards;
+  transform: rotate(90deg);
+}
+
+.container-img-aguila{
+  position: absolute;
+  left: 1rem;
+  bottom: 80px;
+}
+.img-aguila{
+  width: 70px;
+  transform: perspective(60px);
+  transform: rotateY(180deg);
+}
+.container-img-aguila .info-aguila{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 60%;
+  right: 50%;
+  display: none;
+  visibility: hidden;
+}
+
+.container-img-aguila .lineaRecta{
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  display: none;
+  opacity:0;
+  transition: all 1s forwards;
+}
+.container-img-aguila p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  top: 130%;
+  left: 20%;
+  font-size: 14px;
+  opacity:0;
+  display: none;
+  transition: all 1s forwards;
+  text-align: center;
+}
+
+main{
+  padding: 1rem;
+}
+.cundinamarca h2 span{
+  color: var(--primary-dark);
+  font-size: 1.7rem;
+}
+.cundinamarca p{
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  font-weight: var(--font-semibold);
+}
+.cundinamarca p span{
+  color: var(--primary-color);
+}
+.grid-container{
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 'parrafo' 'imgs' ;
+}
+.cundinamarca-description{
+  width: 100%;
+  grid-area: parrafo;
+}
+.imgs-container-top{
+  grid-area: imgs;
+  display: flex;
+  flex-direction: column;
+}
+.imgs-container-top .img-container{
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+.imgs-container-top .img-container:nth-child(2),
+.imgs-container-top .img-container:nth-child(3){
+  display: none;
+}
+
+.imgs-container-top .img-container i{
+  position: absolute;
+  bottom: 75%;
+  left: .2rem;
+}
+.imgs-container-top .img-container img{
+  width: 100%;
+  height: 320px;
+  border-radius: .5rem;
+}
+
+.icon-flora{
+  width: 40px;
+  margin-left: .5rem;
+  transform: translateY(12px);
+}
+
+@media(width > 359px) and (width < 620px){
+  .container-img-danta{
+    right: 6%;
+  } 
+  .img-danta{
+    width: 70px;
+  }
+  .container-img-gentina{
+    right: 15%;
+  } 
+  .img-gentina{
+    width: 50px;
+  }
+}
+
+
+@media  (width >= 620px) and (width < 1024px) {
+  body{
+    margin: auto;
+  }
+  header{
+    background-image: url('../img/sumapaz2.png');
+    height: 50vh;
+    overflow: hidden;
+  } 
+  .container-img-danta{
+    bottom: 150px;
+    right: 8%;
+  }
+ .img-danta{
+    width: 200px;
+  }
+  .container-img-danta p{
+    display: block;
+    opacity: 1;
+  }
+  .container-img-danta .info-danta{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  .container-img-danta .lineaRecta{
+    width: 80px;
+    display: block;
+    opacity:1;
+  }
+  .container-img-aguila{
+    bottom: 200px;
+    left: 5%;
+  }
+
+ .img-aguila{
+    width: 130px;
+  }
+  .container-img-aguila .info-aguila{
+    display: block;
+    visibility: visible;
+  }
+
+  .container-img-aguila .lineaRecta{
+    display: block;
+    opacity:1;
+  }
+  .container-img-aguila p{
+    opacity:1;
+    display: block;
+    top: 150%;
+    left: 0;
+  }
+  .container-img-gentina{
+    bottom: 0px;
+    right:20%;
+  }
+ .img-gentina{
+    width: 80px;
+  }
+  .container-img-gentina .info-gentina{
+    display: block;
+  }
+  
+  .container-img-gentina p{
+    display: block;
+    opacity: 1;
+  }
+  
+  .container-img-gentina .lineaRecta{
+    display: block;
+    opacity:1;
+  }
+  header h1{
+    position: absolute;
+    width: 100%;
+    top: 6rem;
+    text-align: center;
+    font-size: 32px;
+    padding-left: 3rem;
+  }
+
+  main{
+    padding: 2rem;
+  }
+ 
+  .grid-container{
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 'parrafo imgs'  ;
+  }
+
+  .cundinamarca-description{
+    width: 100%;
+    grid-area: parrafo;
+  }
+ 
+  
+}
+
+@media  (width >= 1024px){
+  body{
+    margin: auto;
+  }
+  header{
+    background-image: url('../img/sumapaz2.jpg');
+    height: 100vh;
+    overflow: hidden;
+  } 
+  header h1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 8rem;
+    font-size: 2.3rem;
+  }
+  .container-img-danta{
+    bottom: 200px;
+    right: 8%;
+  }
+ .img-danta{
+    width: 250px;
+  }
+  .container-img-danta p{
+    display: block;
+    opacity: 1;
+  }
+  .container-img-danta .info-danta{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  .container-img-danta .lineaRecta{
+    display: block;
+    opacity:1;
+  }
+
+  .container-img-aguila{
+    bottom: 300px;
+    left: 5%;
+  }
+ .img-aguila{
+    width: 250px;
+  }
+  .container-img-aguila .info-aguila{
+    display: block;
+    visibility: visible;
+  }
+  .container-img-aguila .lineaRecta{
+    display: block;
+    opacity:1;
+  }
+  .container-img-aguila p{
+    opacity:1;
+    display: block;
+  }
+
+  .container-img-gentina{
+    bottom: 0px;
+    right:30%;
+  }
+ .img-gentina{
+    width: 150px;
+  }
+  .container-img-gentina .info-gentina{
+    display: block;
+  }
+  .container-img-gentina p{
+    display: block;
+    opacity: 1;
+  }
+  .container-img-gentina .lineaRecta{
+    display: block;
+    opacity:1;
+  }
+  main{
+    padding: 2rem;
+  }
+  .subtitle{
+    font-size: 2rem;
+  }
+
+  .imgs-container-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .imgs-container-top .img-container{
+  width: 350px;
+  }
+  .imgs-container-top .img-container i{
+    top: 2.5rem;
+    color: #fff;
+   }
+
+
+.imgs-container-top .img-container:nth-child(2),
+.imgs-container-top .img-container:nth-child(3){
+  display: block;
+}
+
+
+}
+@media  (width > 1024px) and (width < 1239px){
+  main{
+    padding: 1rem;
+  }
+}
+
+@media  (width > 1440px){
+  header h1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 8rem;
+    font-size: 3rem;
+  }
+}
+@media  (width > 1600px){
+  header h1{
+    width: 100%;
+    top: 10rem;
+    text-align: center;
+    font-size: 56px;
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}  {%  endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static' , filename = 'assets/css/general.css')}}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  {%  block linkCss %} {% endblock %} 
+  li
+</head>
+
+
+<body>
+    {% include 'components/nav.html' %}
+
+ 
+    {% block content %}
+      <!--Bloque de contenido  -->
+    {% endblock %}
+
+
+    {% include 'components/footer.html' %}
+    
+    <script src="{{ url_for('static' , filename = 'assets/code/index.js')}}" type="module"></script>
+</body>
+</html>

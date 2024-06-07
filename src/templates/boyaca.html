@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block linkCss %}   <link rel="stylesheet" href="{{ url_for('static' , filename = 'assets/css/boyaca.css')}}">  {% endblock %}
+
+{% block title %} Biodiversidad en Boyacá {% endblock %}
+
+{% block content %}
+
+
+
+<header>
+  <h1>Páramo Ocetá , Monguí - Boyacá </h1>
+
+  <div class="container-IconMenu toggleMenu"> <i class="bi bi-list menuIcon toggleMenu"></i></div> 
+
+  <div class="container-img-zamuro">
+      <img src="{{ url_for('static' , filename='./assets/img/reyZamuro-Photoroom.png')}}" alt="" class="img-zamuro">
+      <i class="bi bi-info-circle info-zamuro"></i>
+      <p>Rey de los gallinazos<em> <br> (Sarcoramphus papa)</em> </p>
+      <img src="{{ url_for('static' , filename='./assets/img/lineaAngulo.png')}}" alt="" class="lineaRecta">
+  </div>
+
+  <div class="container-img-venado">
+    <img src="{{ url_for('static' , filename='./assets/img/venado.png')}}" alt="" class="img-venado"> 
+    <i class="bi bi-info-circle info-venado"></i>
+    <p> Venado de cola blanca <em> <br> (Odocoileus virginianus)</em></p>
+    <img src="{{ url_for('static' , filename='./assets/img/lineaAngulo.png')}}" alt="" class="lineaRecta">
+  </div>  
+</header>
+
+<main>
+<!-- Sección donde se habla sobre las cifras de especies en colombia. -->
+<section class="cundinamarca">
+
+  <h2 class="subtitle"> Boyacá , El rey de los frailejones. </h2> <span> <img class="icon-flora" src="{{ url_for('static' , filename='./assets/img/hoja.png')}}" alt=""></span> 
+   <div  class=" grid-container">
+    
+    <p class="cundinamarca-description">
+      Segun el Instituto Humbold El total de especies de frailejones registradas en el mundo es de <span>144</span>,  Solamente en Colombia  crecen Mas de 90 de esas especies, siendo el país con mas presencia de frailejones en todo el mundo, Curiosamente estos mismos solo crecen o tienen presencia en paises como  Ecuador, Venezuela y Colombia. En Boyacá  departamento de Colombia, Habita  alredor del <span>50%</span> del total de las especies de frailejones de su nación.
+    </p>
+
+    <div class="imgs-container-top"> 
+
+      <div class="img-container">
+        <p>Frailejon  <span> (Espeletia Ocetana) </span></p>
+        <img src="{{ url_for('static' , filename='./assets/img/Espeletia ocetana.jpg')}}" alt="Foto Frailejon">
+        <i class="bi bi-info-circle info"></i>
+      </div>
+
+      <div class="img-container">
+        <p>Frailejon<span> (Espeletia paipana) </span></p>
+        <img src="{{ url_for('static' , filename='./assets/img/espeletia-paipana.jpg')}}" alt="Foto Frailejon">
+        <i class="bi bi-info-circle info"></i>
+      </div>
+
+      <div class="img-container">
+        <p>Frailejon <span> ( Espeletia ramosa) </span></p>
+        <img src="{{ url_for('static' , filename='./assets/img/espeletia-ramosa.jpg')}}" alt="Foto Frailejon">
+        <i class="bi bi-info-circle info"></i>
+      </div>
+    </div>
+
+     </div>
+
+
+<section class="especies-cundinamarca">
+  <h2 class="subtitle"> Biodiversidad de Boyacá </h2><span> <img class="icon-flora" src="{{ url_for('static' , filename='./assets/img/hoja.png')}}" alt=""></span> 
+   
+  <article class="container-cards"> <!-- Contenido insertado desde Dinamicamente  --> 
+    {% for especie in data %}
+    <div class="card">
+      <div class="front-card">
+        <img src={{especie.Imagen}} alt="foto uñakusma">
+        <div class="container-dates">
+          <h3>{{especie.Nombre_Comun}}</h3>
+          <hr>
+          <p><em> {{especie.Nombre_Cientifico}}</em></p>
+        </div>
+      </div>
+
+      <div class="back-card" >
+      <h3>{{especie.Habitat}}</h3>
+      <p>Nombre comun: <span> {{especie.Nombre_Comun}}</span> </p>
+      <p>Nombre cientifico: <span> <em> {{especie.Nombre_Cientifico}}  </em> </span> </p>
+      <p>Especie : <span> {{especie.Tipo}} </span> </p>
+      <p>Latitud : <span>  {{especie.Latitud}} </span>  </p>
+      <p>Longitud : <span> {{especie.Longitud}}</span> </p>
+      <a target='_blank' href= "{{especie.direccion_web}}" > 
+        <div class="btn-see-more">
+          <span> Ver mas </span>
+          <i class="bi bi-arrow-right"></i>
+        </div>
+      </a>
+      
+    </div>
+    </div>
+  {%  endfor %}
+    
+  </article>
+ 
+</section>
+ 
+<!-- Sección donde se exponen los grupos de información disponibles   -->
+
+{% include 'components/groups.html' %}
+
+<!-- Sección donde se exponen curiosidades sobre colombia  -->
+
+{% include 'components/curiosities.html' %}
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,775 @@
+
+header{
+  background-image: url('../img/FondoIndexMobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+
+.container-img-condor{
+  position: absolute;
+  bottom: 100px;
+  right: 5%;
+}
+.img-condor{
+  width: 80px;
+}
+.container-img-condor .info-condor{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  display: none;
+}
+.container-img-condor p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  top: 120%;
+  left: 0%;
+  font-size: 14px;
+  display: none;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+}
+.container-img-condor .lineaRecta{
+  position: absolute;
+  top: 85%;
+  right: 52%;
+  display: none;
+  opacity:0;
+}
+.container-img-oso{
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+.img-oso{
+  width: 120px;
+}
+
+.container-img-oso .info-oso{
+  display: none;
+  visibility: hidden;
+}
+
+.container-img-oso .lineaRecta{
+  height: 40px;
+  position: absolute;
+  top: -10%;
+  right: 50%;
+  display: none;
+  opacity:0;
+}
+.container-img-oso p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  font-size: 1rem;
+  top: -20%;
+  right: -100px;
+  opacity:0;
+  display: none;
+}
+
+header h1{
+  position:absolute;
+  top: 2.5rem;
+  color: var(--second-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  z-index: 9;
+}
+main{
+  padding: 1rem;
+}
+.colombia h2 span{
+  color: var(--primary-dark);
+  font-size: 1.7rem;
+}
+.colombia p{
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  font-weight: var(--font-semibold);
+}
+.colombia p span{
+  color: var(--primary-color);
+}
+.colombia .img-container{
+  width: 100%;
+  margin: 1rem 0;
+  position: relative;
+}
+.colombia .img-container img{
+  width: 100%;
+  height: 250px;
+  border-radius: .5rem;
+}
+.grid-container .orquidea2{
+  display: none;
+  visibility: hidden;
+}
+.colombia .img-container p{
+  font-weight: var(--font-semibold);
+}
+.colombia .img-container span{
+  font-style: italic;
+  color: var(--dark-color);
+}
+.colombia .img-container .info{
+  color: var(--second-color);
+  position: absolute;
+  bottom: 75%;
+  left: .5rem;
+}
+
+.mapaContainer{
+  display: none;
+  visibility: none;
+}
+.mapaArticle .info-region{
+  display: none;
+  opacity: 0;
+}
+.mapaContainer path{
+  fill:rgb(136, 198, 146);
+  &:hover{
+    fill:#4cad76;
+  }
+  stroke: rgb(208, 244, 214);
+  stroke-width: 2px;
+  cursor: pointer;
+}
+.mapaContainer path#COCUN2{
+  fill:#369a61;
+  &:hover{
+    fill:#133020;
+  }
+}
+.mapaContainer path.boyaca{
+  fill:#095128;
+  &:hover{
+    fill: #32b068;
+  }
+}
+  .container-imgs-boyaca .img-container{
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+
+  .container-imgs-boyaca .img-container:nth-child(2),
+  .container-imgs-boyaca .img-container:nth-child(3),
+  .container-imgs-boyaca .img-container:nth-child(4){
+    display: none;
+    visibility: hidden;
+  }
+  .container-imgs-boyaca.img-container p {
+    padding: .5rem 0;
+  }
+  .images-grid .img-container p span{
+    font-style: italic;
+  }
+  .images-grid .img-container img{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    border-radius: 1rem;
+  }
+  .images-grid .img-container i{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    color: var(--second-color);
+  }
+  .container-cundinamarca{
+    margin-top: 1rem;
+  }
+
+  .container-imgs-cundinamarca .img-container{
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+  .container-imgs-cundinamarca .img-container:nth-child(1),
+  .container-imgs-cundinamarca .img-container:nth-child(2),
+  .container-imgs-cundinamarca .img-container:nth-child(4){
+    display: none;
+    visibility: hidden;
+  }
+  .card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .region{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 350px;
+    background-image:url('../img/background-image.svg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .region h3{
+    width: 100%;
+    padding: 2rem 2rem 1rem 0rem;
+    color: var(--second-color);
+    font-size: 1.5rem;
+    border-bottom: 2px dashed var(--second-color);
+  }
+.region p{
+    color: var(--second-color);
+    font-size: 1rem;
+}
+.region p span{
+  color: var(--primary-dark);
+  font-weight: var(--font-bold);
+}
+
+ 
+@media(width > 359px) and (width < 620px){
+  .container-img-condor{
+    position: absolute;
+    right: 17%;
+  } 
+  .img-condor{
+    width: 90px;
+  }
+}
+
+@media  (width >= 620px) and (width < 1024px) {
+  body{
+    margin: auto;
+  }
+  header{
+    background-image: url('../img/FondoIndexDesktop.jpg');
+    height: 50vh;
+    overflow: hidden;
+  } 
+  .container-img-condor{
+    position: absolute;
+    bottom: 200px;
+    right: 8%;
+  }
+ .img-condor{
+    width: 250px;
+  }
+  .container-img-condor p{
+    display: block;
+    opacity: 1;
+  }
+  .container-img-condor .lineaRecta{
+    display: block;
+    opacity: 1;
+  }
+ .img-oso{
+    width: 300px;
+  }
+  
+  header h1{
+    width: 80%;
+    top: 6rem;
+    text-align: left;
+    font-size: 24px;
+    padding-left: 3rem;
+  }
+  main{
+    padding: 2rem;
+  }
+  .colombia h2 span{
+    font-size: 2rem;
+  }
+  .colombia p{
+    font-size: 1.3rem;
+  }
+ .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "parrafo mapa" "catleya catleya" "chiguana orquideas-colombia";
+  } 
+  .grid-container .catleya{
+    display: flex;
+    grid-area: catleya;
+  }
+
+  .grid-container .especies-colombia{
+    grid-area: parrafo;
+  }
+
+  .grid-container .orquidea2{
+    display: block;
+    visibility: visible;
+  }
+  .mapaArticle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mapaContainer {
+    display: block;
+    visibility: visible;
+    grid-area: mapa;
+    width: 300px;
+    transform: translateY(-50px);
+  }
+  .colombia .img-container{
+    width: 45%;
+    margin: 1rem;
+  }
+
+
+  .grid-container .chiguana{
+    grid-area: chiguana;
+    width: 90%;
+  }
+
+  .grid-container .chiguana img{
+    margin: auto;
+  }
+
+  .grid-container .orquideas-colombia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: orquideas-colombia;
+    padding-top:2rem ;
+  }
+  .colombia .img-container p{
+    font-size: 1.2rem;
+  } 
+  .container-imgs-boyaca .img-container:nth-child(1){
+    display:none;
+    visibility: hidden;
+  }
+  .container-imgs-boyaca .img-container:nth-child(2),
+  .container-imgs-boyaca .img-container:nth-child(3){
+    display: block;
+    visibility: visible;
+  }
+  .container-boyaca{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,250px);
+    grid-template-areas: "images card" "images card";
+    gap: 2rem;
+  }
+  .container-imgs-boyaca{
+    grid-area: images;
+  }
+  .card-container{
+    grid-area: card;
+  }
+  .region{
+    margin-top: 2rem;
+    height: 480px;
+  }
+  .region h3{
+    font-size: 2rem;
+  }
+
+.region p{
+    font-size: 1.2rem;
+}
+  .container-imgs-boyaca {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .images-grid .img-container{
+    width: 90%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .images-grid .img-container img{
+    width: 100%;
+    height: 210px;
+  }
+
+  .container-cundinamarca{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,250px);
+    grid-template-areas: "card images" "card images" ;
+    gap: 2rem;
+  }
+  .container-imgs-cundinamarca{
+    grid-area: images;
+  }
+
+  .container-imgs-cundinamarca .img-container:nth-child(3){
+    display: none;
+    visibility: hidden;
+  }
+
+  .container-imgs-cundinamarca .img-container:nth-child(4),
+  .container-imgs-cundinamarca .img-container:nth-child(1){
+    display: block;
+    visibility: visible;
+  }
+  .container-imgs-cundinamarca {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+}
+
+@media (width > 770px) and (width < 1024px ) {
+  header h1{
+    top: 6rem;
+    font-size: 24px;
+  }
+  .container-img-condor{
+    bottom: 240px;
+    right:7%;
+  }
+ .img-condor{
+    width: 300px;
+  }
+
+ .img-oso{
+    width: 320px;
+}
+}
+
+@media  (width >= 1024px){
+  body{
+    margin: auto;
+  }
+  header{
+    background-image: url('../img/FondoIndexDesktop.jpg');
+    height: 100vh;
+    overflow: hidden;
+  }  
+  
+ .img-condor{
+    width: 350px;
+  }
+  .container-img-condor .info-condor{
+    display: block;
+    font-size: 1.2rem;
+    top: 70%;
+    right: 50%;
+  }
+  .container-img-condor{
+    bottom: 45%;
+  }
+  .container-img-condor p{
+    display: block;
+    opacity: 1;
+    font-size: 1.2rem;
+    right: -350px;
+    bottom: -25%;
+  }
+  .container-img-condor .lineaRecta{
+    display: block;
+    opacity: 1;
+  }
+  .img-oso{
+      width: 400px;
+  }
+  .container-img-oso{
+    bottom: -5%;
+  }
+  .container-img-oso .info-oso{
+    display: block;
+    font-size: 1.2rem;
+    right: 45%;
+  }
+  .container-img-oso p{
+    font-size: 1.5rem;
+    top: -25%;
+    right:-85%;
+    display: block;
+    opacity: 1;
+  }
+  .container-img-oso .lineaRecta{
+    display: block;
+    opacity: 1;
+    height: 90px;
+    top: -20%;
+    right: 30%;
+  }
+  header h1{
+    width: 80%;
+    top: 7rem;
+    text-align: left;
+    font-size: 32px;
+    padding-left: 3rem;
+  }
+  main{
+    padding: 5rem;
+  }
+  .subtitle{
+    font-size: 2rem;
+  }
+  .colombia h2 {
+    font-size: 2.5rem;
+  }
+  .colombia h2 span{
+    font-size: 3rem;
+  }
+  .colombia p{
+    margin-top: 2rem;
+  }
+  .container-imgs-boyaca .img-container:nth-child(2),
+  .container-imgs-boyaca .img-container:nth-child(3),
+  .container-imgs-boyaca .img-container:nth-child(4){
+    display: block;
+    visibility: visible;
+  }
+  .container-imgs-cundinamarca .img-container:nth-child(1),
+  .container-imgs-cundinamarca .img-container:nth-child(2),
+  .container-imgs-cundinamarca .img-container:nth-child(4){
+    display: block;
+    visibility: visible;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas:
+     "parrafo parrafo parrafo mapa mapa" 
+     "catleya catleya catleya mapa mapa" 
+     "parrafo2 parrafo2 parrafo2 chiguana chiguana";
+  }
+
+  .grid-container .especies-colombia{
+    grid-area: parrafo;
+  
+  }
+  .grid-container .mapaArticle{
+    width: 100%;
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-70px);
+  }
+  .grid-container .mapaArticle .mapaContainer{
+    width: 400px;
+    height: auto;
+    display: block;
+    visibility: visible;
+  }
+  .mapaArticle{
+    position: relative;
+  }
+  .mapaArticle .info-region{
+    width: 250px;
+    background-color: #0b6f32;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    padding: .5rem;
+    display: none;
+    opacity: 0;
+  }
+  .mapaArticle .info-region p{
+    margin: 0;
+    text-align: center;
+    color: var(--second-color);
+    font-size: 1rem;
+  }
+  .mapaContainer path.boyaca:hover ~  .mapaContainer.info-region{
+    background-color: #030620;
+  }
+
+  .grid-container .catleya{
+    display: flex;
+    grid-area: catleya;
+  }
+
+  
+  .grid-container .orquidea2{
+    display: block;
+    visibility: visible;
+  }
+  .grid-container .chiguana{
+    grid-area: chiguana;
+    align-self: end;
+    justify-self: end;
+  }
+
+  .grid-container .chiguana img{
+    min-width: 250px;
+    max-width: 300px;
+  }
+  .grid-container .img-container.chiguana i.info{
+    position: absolute;
+    top: 25%;
+    left: 1rem;
+  }
+  .colombia .img-container{
+    width: 350px;
+    margin: 0rem auto;
+  }
+   .colombia .img-container span{
+    font-size: 1rem;
+    font-weight: var(--font-semibold);
+    margin: 0;
+  }
+  .grid-container .orquideas-colombia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: parrafo2;
+    padding: 0;
+  }
+  .grid-container .orquideas-colombia p{
+    margin-top: 0;
+  }
+  .colombia .img-container img{
+    width: 300px;
+    height:200px;
+  }
+  .container-boyaca{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-areas: "container-images container-images card-boyaca";
+  }
+  .container-imgs-boyaca{
+    grid-area: container-images;
+  }
+  .container-boyaca .boyaca{
+    grid-area: card-boyaca;
+  }
+  .images-grid{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .images-grid .img-container{
+    width: 300px;
+    margin: auto;
+    position: relative;
+  }
+  .images-grid .img-container p {
+    padding: .5rem 0;
+  }
+  .images-grid .img-container p span{
+    font-style: italic;
+  }
+  .images-grid .img-container img{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    border-radius: 1rem;
+  }
+  .images-grid .img-container i{
+    position: absolute;
+    top: 3rem;
+    left: .5rem;
+    color: var(--second-color);
+  }
+  .container-cundinamarca{
+    margin: auto;
+    margin-top: 8rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-areas: " card-cundinamarca container-images container-images"
+  }
+  .container-cundinamarca .container-imgs-cundinamarca{
+    grid-area:container-images;
+  }
+  .container-cundinamarca .cundinamarca{
+    grid-area: card-cundinamarca;
+    margin: auto;
+  }
+  .card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .region{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 350px;
+    height: 400px;
+    background-image:url('../img/background-image.svg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+.region h3{
+    width: 100%;
+    padding: 2rem 2rem 1rem 0rem;
+    color: var(--second-color);
+    font-size: 2rem;
+    border-bottom: 2px dashed var(--second-color);
+}
+.region p{
+    color: var(--second-color);
+    font-size: 1.3rem;
+}
+.region p span{
+  color: var(--primary-dark);
+  font-weight: var(--font-bold);
+}
+
+}
+@media  (width > 1024px) and (width < 1239px){
+  main{
+    padding: 1rem;
+  }
+}
+
+@media  (width > 1440px){
+  header h1{
+    width: 80%;
+    top: 7rem;
+    text-align: left;
+    font-size: 32px;
+    padding-left: 7rem;
+  }
+  .img-condor{
+    width: 350px;
+  }
+ .img-oso{
+    width: 400px;
+  }
+  main{
+    max-width: 95%;
+    margin: auto;
+  }
+  
+}
+@media  (width > 1600px){
+  header h1{
+    width: 70%;
+    top: 8rem;
+    text-align: left;
+    font-size: 48px;
+    padding-left: 8rem;
+  }
+  .img-condor{
+    width: 500px;
+  }
+ .img-oso{
+    width: 500px;
+  }
+}

@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block linkCss %}   <link rel="stylesheet" href="{{ url_for('static' , filename = 'assets/css/cundinamarca.css')}}">  {% endblock %}
+{% block title %} Biodiversidad en Colombia {% endblock %}
+
+{% block content %}
+<header>
+
+  <h1>Páramo Sumapaz , Bogotá - Cundinamarca </h1>
+
+<div class="container-IconMenu toggleMenu"> <i class="bi bi-list menuIcon toggleMenu"></i></div> 
+
+<div class="container-img-danta">
+    <img src="{{ url_for('static' , filename='./assets/img/danta de paramo.png')}}" alt="" class="img-danta">
+    <i class="bi bi-info-circle info-danta"></i>
+    <p>Danta de páramo<em> <br> (Tapirus pinchaques)</em> </p>
+    <img src="{{ url_for('static' , filename='./assets/img/lineaAngulo.png')}}" alt= "" class="lineaRecta">
+</div>
+
+<div class="container-img-gentina">
+  <img src="{{ url_for('static' , filename='./assets/img/gentinasedifolia.png')}}" alt="" class="img-gentina">
+  <i class="bi bi-info-circle info-gentina"></i>
+  <p> Gectiana<em> <br> (Gentiana sedifolia )</em> </p>
+  <img src="{{ url_for('static' , filename='./assets/img/lineaRecta.svg')}}" alt="" class="lineaRecta">
+</div>
+
+<div class="container-img-aguila">
+  <img src="{{ url_for('static' , filename='./assets/img/Geranoaetus.png')}}" alt="" class="img-aguila"> 
+  <i class="bi bi-info-circle info-aguila"></i>
+  <p> Aguilucho <em> (Geranoaetus)</em></p>
+  <img src="{{ url_for('static' , filename='./assets/img/lineaRecta.svg')}}" alt="" class="lineaRecta">
+</div>  
+</header>
+
+<main>
+<!-- Sección donde se habla sobre las cifras de especies en colombia. -->
+<section class="cundinamarca">
+
+<h2 class="subtitle"> Cundinamarca,el rey de las alturas. </h2>
+
+ <div  class=" grid-container">
+  
+  <p class="cundinamarca-description">
+    Choachí Cundinamarca queda  ubicado aproximadamente a <span> 50 minutos de Bogotá </span> , en este pequeño y hermoso municipio queda ubicada <span>la cascada más alta de Colombia</span>, La sexta en Sudamérica y la 60 del mundo, con una altura de casi <span> 600</span> metros,  la Chorrera, como suele ser llamada, se posiciona como la número 1 en Colombia, sin duda alguna otra razón más para querer explorar las maravillas de Cundinamarca, rodeada de hermosos paisajes  e imponetes aguas cristalinas.
+  </p>
+
+  <div class="imgs-container-top"> 
+
+      <div class="img-container">
+        <p>La Chorrera  <span> (Choachi,C/marca) </span></p>
+        <img src="{{ url_for('static' , filename='./assets/img/lachorrerajpg.jpg')}}" alt="Foto pla Chorrera choachí">
+        <i class="bi bi-info-circle info"></i>
+      </div>
+
+      <div class="img-container">
+        <p>Laguna<span> ( Guatavita -C/marca) </span></p>
+        <img src="{{ url_for('static' , filename='./assets/img/guatavita.jpg')}}" alt="Foto laguna guatavita">
+        <i class="bi bi-info-circle info"></i>
+      </div>
+
+      <div class="img-container">
+        <p>Chocontá  <span> (Cundinamarca) </span></p>
+        <img src="https://c.pxhere.com/photos/e7/41/field_country_chocont_cundinamarca_colombia_clouds_sun_people-744393.jpg!d" srcset="https://c.pxhere.com/photos/e7/41/field_country_chocont_cundinamarca_colombia_clouds_sun_people-744393.jpg!d" alt="landschap, natuur, gras, berg-, wolk, mensen, hemel, zon, veld-, farm, weide, prairie, heuvel, vallei, bergketen, land, weide, landbouw, hoogland, vlakte, wolken, grasland, plateau, fjord, Colombia, Cundinamarca, landelijk gebied, geografisch kenmerk, bergachtige landforms, chocont, chingac o, Gratis Afbeeldingen In PxHere">
+        <i class="bi bi-info-circle info"></i>
+      </div>
+  </div>
+
+</div>
+
+
+<section class="especies-cundinamarca">
+<h2 class="subtitle"> Biodiversidad de Cundinamarca </h2><span> <img class="icon-flora" src="{{ url_for('static' , filename='./assets/img/hoja.png')}}" alt=""></span> 
+
+<article class="container-cards"> 
+      {% for especie in data %}
+        <div class="card">
+          <div class="front-card">
+            <img src={{especie.Imagen}} alt="foto uñakusma">
+            <div class="container-dates">
+              <h3>{{especie.Nombre_Comun}}</h3>
+              <hr>
+              <p><em> {{especie.Nombre_Cientifico}}</em></p>
+            </div>
+          </div>
+    
+          <div class="back-card" >
+          <h3>{{especie.Habitat}}</h3>
+          <p>Nombre comun: <span> {{especie.Nombre_Comun}}</span> </p>
+          <p>Nombre cientifico: <span> <em> {{especie.Nombre_Cientifico}}  </em> </span> </p>
+          <p>Especie : <span> {{especie.Tipo}} </span> </p>
+          <p>Latitud : <span>  {{especie.Latitud}} </span>  </p>
+          <p>Longitud : <span> {{especie.Longitud}}</span> </p>
+          <a target='_blank' href= "{{especie.direccion_web}}" > 
+            <div class="btn-see-more">
+              <span> Ver mas </span>
+              <i class="bi bi-arrow-right"></i>
+            </div>
+          </a>
+          
+        </div>
+        </div>
+      {%  endfor %}
+</article>
+
+</section>
+
+<!-- Sección donde se exponen los grupos de información disponibles   -->
+
+{% include 'components/groups.html' %} 
+
+<!-- Sección donde se exponen curiosidades sobre colombia  -->
+
+{% include 'components/curiosities.html' %} 
+
+</main>
+
+
+{%endblock %}
